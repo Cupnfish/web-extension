@@ -33,36 +33,36 @@ pub use theme::*;
 
 #[wasm_bindgen]
 extern "C" {
-    pub type Browser;
+    pub type Chrome;
 
-    pub static browser: Browser;
+    pub static chrome: Chrome;
 
     #[wasm_bindgen(method, getter)]
-    pub fn downloads(this: &Browser) -> Downloads;
+    pub fn downloads(this: &Chrome) -> Downloads;
 
     #[wasm_bindgen(method, getter, js_name = sidebarAction)]
-    pub fn sidebar_action(this: &Browser) -> SidebarAction;
+    pub fn sidebar_action(this: &Chrome) -> SidebarAction;
 
     #[wasm_bindgen(method, getter, js_name = browserAction)]
-    pub fn browser_action(this: &Browser) -> BrowserAction;
+    pub fn browser_action(this: &Chrome) -> BrowserAction;
 
     #[wasm_bindgen(method, getter)]
-    pub fn runtime(this: &Browser) -> Runtime;
+    pub fn runtime(this: &Chrome) -> Runtime;
 
     #[wasm_bindgen(method, getter)]
-    pub fn storage(this: &Browser) -> Storage;
+    pub fn storage(this: &Chrome) -> Storage;
 
     #[wasm_bindgen(method, getter)]
-    pub fn windows(this: &Browser) -> Windows;
+    pub fn windows(this: &Chrome) -> Windows;
 
     #[wasm_bindgen(method, getter)]
-    pub fn tabs(this: &Browser) -> Tabs;
+    pub fn tabs(this: &Chrome) -> Tabs;
 
     #[wasm_bindgen(method, getter)]
-    pub fn sessions(this: &Browser) -> Sessions;
+    pub fn sessions(this: &Chrome) -> Sessions;
 
     #[wasm_bindgen(method, getter)]
-    pub fn theme(this: &Browser) -> BrowserTheme;
+    pub fn theme(this: &Chrome) -> BrowserTheme;
 }
 
 // TODO getRules, removeRules, and addRules
