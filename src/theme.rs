@@ -1,7 +1,6 @@
-use wasm_bindgen::prelude::*;
-use js_sys::{Array, Promise};
 use crate::Event;
-
+use js_sys::{Array, Promise};
+use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 extern "C" {
@@ -11,7 +10,6 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn theme_frame(this: &ThemeImages) -> Option<String>;
 }
-
 
 #[wasm_bindgen]
 extern "C" {
@@ -134,7 +132,6 @@ extern "C" {
     pub fn toolbar_vertical_separator(this: &ThemeColors) -> Option<String>;
 }
 
-
 #[wasm_bindgen]
 extern "C" {
     #[derive(Debug, Clone)]
@@ -148,7 +145,6 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn additional_backgrounds_tiling(this: &ThemeProperties) -> Option<Array>;
 }
-
 
 #[wasm_bindgen]
 extern "C" {
@@ -165,7 +161,6 @@ extern "C" {
     pub fn properties(this: &Theme) -> Option<ThemeProperties>;
 }
 
-
 #[wasm_bindgen]
 extern "C" {
     #[derive(Debug)]
@@ -177,7 +172,6 @@ extern "C" {
     #[wasm_bindgen(method, getter, js_name = windowId)]
     pub fn window_id(this: &ThemeUpdateInfo) -> Option<i32>;
 }
-
 
 #[wasm_bindgen]
 extern "C" {
